@@ -7,9 +7,7 @@ URL:      https://github.com/dciabrin/emudbg
 
 %define headrev %(echo %{version} | cut -d+ -f2)
 
-Source0: github.com_dciabrin_emudbg_archive_nightly-%{headrev}.tar.gz
-
-BuildRequires: git-annex
+Source0: https://github.com/dciabrin/emudbg/archive/nightly-%{headrev}.tar.gz
 
 %description
 emudbg defines a simple debugging API that can be implemented by
