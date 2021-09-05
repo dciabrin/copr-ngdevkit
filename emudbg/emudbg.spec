@@ -1,6 +1,6 @@
 Name:     emudbg
 Version:  0.2+202105012058
-Release:  1%{?dist}
+Release:  2%{?dist}
 Summary:  emulator-agnostic source-level debugging API
 License:  GPLv3+
 URL:      https://github.com/dciabrin/emudbg
@@ -8,6 +8,8 @@ URL:      https://github.com/dciabrin/emudbg
 %define headrev %(echo %{version} | cut -d+ -f2)
 
 Source0: github.com_dciabrin_emudbg_archive_nightly-%{headrev}.tar.gz
+
+BuildRequires: git-annex
 
 %description
 emudbg defines a simple debugging API that can be implemented by
