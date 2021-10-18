@@ -9,6 +9,8 @@ URL:      https://github.com/dciabrin/emudbg
 
 Source0: https://github.com/dciabrin/emudbg/archive/nightly-%{headrev}.tar.gz
 
+BuildRequires: automake autoconf libtool pkgconfig
+
 %description
 emudbg defines a simple debugging API that can be implemented by
 emulators to expose simple step-by-step execution and memory
