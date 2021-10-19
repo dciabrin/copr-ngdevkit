@@ -8,8 +8,8 @@ License:  GPLv3+
 URL:      https://github.com/dciabrin/gngeo
 Source0:  https://github.com/dciabrin/gngeo/archive/nightly-%{headrev}.tar.gz
 
-BuildRequires: autoconf autoconf-archive automake libtool make pkg-config
-Requires: emudbg-static libGLEW SDL2
+BuildRequires: autoconf autoconf-archive automake libtool make pkg-config SDL2-devel zlib-devel glew-devel
+Requires: emudbg-static libGLEW SDL2 zlib
 
 %description
 SDL2 fork of GnGeo, the portable Neo-Geo emulator. It provides a
