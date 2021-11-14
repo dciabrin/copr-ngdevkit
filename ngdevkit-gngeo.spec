@@ -1,7 +1,7 @@
 %global headrev 202105061001
 
 Name:     ngdevkit-gngeo
-Version:  0.8.1+%{headrev}
+Version:  0.8.1+202111141729
 Release:  1%{?dist}
 Summary:  Portable Neo-Geo emulator customized for ngdevkit
 License:  GPLv3+
@@ -51,5 +51,5 @@ make -j1 pkgdatadir=%{_datadir}/ngdevkit-gngeo
 
 
 %changelog
-* Fri Aug 27 2021 Thu Jul 07 2011 Damien Ciabrini <damien.ciabrini@gmail.com> - 0.8.1-1
-- Nightly rebuild of git head
+* Sun Nov 14 2021 CI Build Bot <> - 0.8.1+202111141729-1
+- Nightly build for tag nightly-202111141729
