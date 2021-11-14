@@ -1,6 +1,6 @@
 Name:     emudbg
-Version:  0.2+202105012058
-Release:  2%{?dist}
+Version:  0.2+202111140941
+Release:  1%{?dist}
 Summary:  emulator-agnostic source-level debugging API
 License:  GPLv3+
 URL:      https://github.com/dciabrin/emudbg
@@ -49,3 +49,5 @@ make %{?_smp_mflags}
 
 
 %changelog
+* Sun Nov 14 2021 CI Build Bot <> - 0.2+202111140941-1
+- Nightly build for tag nightly-202111140941
