@@ -65,9 +65,7 @@ sed -i '/^%changelog/q' $PKG.spec
 echo -e "* $CHANGELOG_DATE CI Build Bot <> - $COPR_VERSION" >> $PKG.spec
 echo -e "- Nightly build for tag nightly-${HEAD_COMMIT_DATE}" >> $PKG.spec
 
-NEW_NIGHTLY_VERSION=nightly/${PKG}-${COPR_VERSION}
-git checkout -b ${NEW_NIGHTLY_VERSION}
 git add $PKG.spec
 git commit -m "Nightly build ${PKG} ${HEAD_COMMIT_DATE}"
-git push -u origin ${NEW_NIGHTLY_VERSION}
+git push
 echo "New nightly version ready to be rebuilt in COPR"
