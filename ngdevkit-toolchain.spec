@@ -2,7 +2,7 @@
 %global newlib_mirror https://sourceware.org/ftp
 
 Name:     ngdevkit-toolchain
-Version:  0.1+202108281026
+Version:  0.1+202111151050
 Release:  1%{?dist}
 Summary:  Open source development for Neo-Geo
 License:  GPLv3+
@@ -65,5 +65,5 @@ make %{?_smp_mflags} -- prefix=/usr LOCAL_PACKAGE_DIR=%{_sourcedir}
 
 
 %changelog
-* Fri Aug 27 2021 Thu Jul 07 2011 Damien Ciabrini <damien.ciabrini@gmail.com> - 0.1-1
-- Nightly rebuild of git head
+* Mon Nov 15 2021 CI Build Bot <> - 0.1+202111151050-1
+- Nightly build for tag nightly-202111151050
