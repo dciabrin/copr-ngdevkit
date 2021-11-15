@@ -9,7 +9,7 @@ if [ -z "$PKG" ]; then
 tag=$(git tag --sort=-creatordate | grep -E '[^0-9]*-[0-9.]*\+[0-9]*-[0-9]*' | head -1)
 pkg=$(echo $tag | sed -E 's%^([^0-9]*)-[0-9].*$%\1%')
 else
-pkg=$(echo $PKG | sed 's/.spec//')
+pkg=$(basename $PKG | sed 's/.spec//')
 tag=$(git tag --sort=-creatordate | grep "$pkg" | head -1)
 fi
 
