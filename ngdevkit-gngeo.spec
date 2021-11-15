@@ -1,11 +1,12 @@
-%global headrev 202105061001
-
 Name:     ngdevkit-gngeo
 Version:  0.8.1+202111141729
 Release:  1%{?dist}
 Summary:  Portable Neo-Geo emulator customized for ngdevkit
 License:  GPLv3+
 URL:      https://github.com/dciabrin/gngeo
+
+%define headrev %(echo %{version} | cut -d+ -f2)
+
 Source0:  https://github.com/dciabrin/gngeo/archive/nightly-%{headrev}.tar.gz
 
 BuildRequires: autoconf autoconf-archive automake libtool make pkg-config SDL2-devel zlib-devel glew-devel

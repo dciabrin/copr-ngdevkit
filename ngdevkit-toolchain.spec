@@ -1,13 +1,15 @@
-%global headrev 202108281026
 %global gnu_mirror https://ftpmirror.gnu.org
 %global newlib_mirror https://sourceware.org/ftp
 
 Name:     ngdevkit-toolchain
-Version:  0.1+%{headrev}
+Version:  0.1+202108281026
 Release:  1%{?dist}
 Summary:  Open source development for Neo-Geo
 License:  GPLv3+
 URL:      https://github.com/dciabrin/ngdevkit-toolchain
+
+%global headrev %(echo %{version} | cut -d+ -f2)
+
 Source0:  https://github.com/dciabrin/ngdevkit-toolchain/archive/nightly-%{headrev}.tar.gz
 Source1:  %{gnu_mirror}/binutils/binutils-2.32.tar.bz2
 Source2:  %{gnu_mirror}/gcc/gcc-5.5.0/gcc-5.5.0.tar.xz

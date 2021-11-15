@@ -1,11 +1,11 @@
-%global headrev 202108231901
-
 Name:     ngdevkit
-Version:  0.2+%{headrev}
+Version:  0.2+202108231901
 Release:  1%{?dist}
 Summary:  Open source development for Neo-Geo
 License:  GPLv3+
 URL:      https://github.com/dciabrin/ngdevkit
+
+%define headrev %(echo %{version} | cut -d+ -f2)
 
 Source0:  https://github.com/dciabrin/ngdevkit/archive/nightly-%{headrev}.tar.gz
 
