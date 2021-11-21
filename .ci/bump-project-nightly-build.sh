@@ -67,7 +67,5 @@ echo -e "- Nightly build for tag nightly-${HEAD_COMMIT_DATE}" >> $PKG.spec
 
 git add $PKG.spec
 git commit -m "Nightly build ${PKG} ${HEAD_COMMIT_DATE}"
-git tag $PKG-$COPR_VERSION
 git push
-git push origin $PKG-$COPR_VERSION
 echo "New nightly version ready to be rebuilt in COPR"

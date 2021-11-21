@@ -5,16 +5,17 @@ OUTDIR=$1
 PKG=$2
 
 if [ -z "$PKG" ]; then
-# emudbg-0.2+202105012058-1
-tag=$(git tag --sort=-creatordate | grep -E '[^0-9]*-[0-9.]*\+[0-9]*-[0-9]*' | head -1)
-pkg=$(echo $tag | sed -E 's%^([^0-9]*)-[0-9].*$%\1%')
-else
-pkg=$(basename $PKG | sed 's/.spec//')
-tag=$(git tag --sort=-creatordate | grep "$pkg" | head -1)
+    echo "missing package name" >&2
+    echo "./$0 {outputdir} {package}" >&2
+    exit 1
 fi
 
-echo "Build srpm for package $pkg ($tag)"
+pkg=$(basename $PKG | sed 's/.spec//')
+RPM_VERSION=$(sed -ne "s/^Version: *\(.*\).*/\1/p" $PKG)
+RPM_RELEASE=$(sed -ne "s/^Release: *\(.*\)%.*/\1/p" $PKG)
+tag=${RPM_VERSION}-${RPM_RELEASE}
 
-spectool -g $pkg.spec
-rpmbuild -bs --define "_sourcedir $PWD" --define "_srcrpmdir $PWD" $pkg.spec
+echo "Build srpm for package $pkg ($tag)"
+spectool -g $PKG
+rpmbuild -bs --define "_sourcedir $PWD" --define "_srcrpmdir $PWD" $PKG
 mv -v *.src.rpm $OUTDIR
