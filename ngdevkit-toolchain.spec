@@ -2,7 +2,7 @@
 %global newlib_mirror https://sourceware.org/ftp
 
 Name:     ngdevkit-toolchain
-Version:  0.1+202204011652
+Version:  0.1+202210271636
 Release:  1%{?dist}
 Summary:  Open source development for Neo-Geo
 License:  GPLv3+
@@ -11,7 +11,7 @@ URL:      https://github.com/dciabrin/ngdevkit-toolchain
 %global headrev %(echo %{version} | cut -d+ -f2)
 
 Source0:  https://github.com/dciabrin/ngdevkit-toolchain/archive/nightly-%{headrev}.tar.gz
-Source1:  %{gnu_mirror}/binutils/binutils-2.32.tar.bz2
+Source1:  %{gnu_mirror}/binutils/binutils-2.35.2.tar.bz2
 Source2:  %{gnu_mirror}/gcc/gcc-5.5.0/gcc-5.5.0.tar.xz
 Source3:  %{gnu_mirror}/gdb/gdb-9.2.tar.xz
 Source4:  %{newlib_mirror}/newlib/newlib-4.0.0.tar.gz
@@ -65,5 +65,5 @@ make %{?_smp_mflags} -- prefix=/usr LOCAL_PACKAGE_DIR=%{_sourcedir}
 
 
 %changelog
-* Fri Apr 01 2022 CI Build Bot <> - 0.1+202204011652-1
-- Nightly build for tag nightly-202204011652
+* Thu Oct 27 2022 CI Build Bot <> - 0.1+202210271636-1
+- Nightly build for tag nightly-202210271636
