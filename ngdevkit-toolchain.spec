@@ -15,7 +15,7 @@ Source1:  %{gnu_mirror}/binutils/binutils-2.35.2.tar.bz2
 Source2:  %{gnu_mirror}/gcc/gcc-5.5.0/gcc-5.5.0.tar.xz
 Source3:  %{gnu_mirror}/gdb/gdb-9.2.tar.xz
 Source4:  %{newlib_mirror}/newlib/newlib-4.0.0.tar.gz
-Source5:  http://sourceforge.net/projects/sdcc/files/sdcc/3.7.0/sdcc-src-3.7.0.tar.bz2
+Source5:  https://sourceforge.net/projects/sdcc/files/sdcc/4.2.0/sdcc-src-4.2.0.tar.bz2
 
 
 BuildRequires: autoconf automake bison gawk make texinfo flex gcc-c++
