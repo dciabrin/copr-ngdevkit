@@ -3,7 +3,7 @@
 
 Name:     ngdevkit-toolchain
 Version:  0.1+202306230832
-Release:  1%{?dist}
+Release:  2%{?dist}
 Summary:  Open source development for Neo-Geo
 License:  GPLv3+
 URL:      https://github.com/dciabrin/ngdevkit-toolchain
@@ -58,6 +58,7 @@ make %{?_smp_mflags} -- prefix=/usr LOCAL_PACKAGE_DIR=%{_sourcedir}
 /usr/m68k-neogeo-elf/lib64/*
 %{_bindir}/z80-neogeo-ihx-*
 /usr/z80-neogeo-ihx/include/*
+/usr/z80-neogeo-ihx/bin/*
 /usr/z80-neogeo-ihx/lib/*
 /usr/z80-neogeo-ihx/doc/*
 # %doc
@@ -65,5 +66,5 @@ make %{?_smp_mflags} -- prefix=/usr LOCAL_PACKAGE_DIR=%{_sourcedir}
 
 
 %changelog
-* Fri Jun 23 2023 CI Build Bot <> - 0.1+202306230832-1
+* Fri Jun 23 2023 CI Build Bot <> - 0.1+202306230832-2
 - Nightly build for tag nightly-202306230832
