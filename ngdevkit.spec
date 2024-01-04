@@ -12,6 +12,7 @@ Source0:  https://github.com/dciabrin/ngdevkit/archive/nightly-%{headrev}.tar.gz
 BuildRequires: autoconf automake make zip python ngdevkit-toolchain pkg-config
 Requires: ngdevkit-toolchain pkg-config
 Requires: python >= 3.0
+Requires: python3-pyyaml
 
 %description
 ngdevkit is a ASM/C/C++ software development kit for
