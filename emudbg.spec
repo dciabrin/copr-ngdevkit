@@ -1,5 +1,5 @@
 Name:     emudbg
-Version:  0.2+202305151016
+Version:  0.2+202403192028
 Release:  1%{?dist}
 Summary:  emulator-agnostic source-level debugging API
 License:  GPLv3+
@@ -49,5 +49,5 @@ make %{?_smp_mflags}
 
 
 %changelog
-* Mon May 15 2023 CI Build Bot <> - 0.2+202305151016-1
-- Nightly build for tag nightly-202305151016
+* Wed Mar 20 2024 CI Build Bot <> - 0.2+202403192028-1
+- Nightly build for tag nightly-202403192028
