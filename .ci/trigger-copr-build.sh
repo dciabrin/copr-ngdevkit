@@ -50,10 +50,20 @@ if [ -z "$COPR_SECRET" ]; then
     error "No COPR webhook secret specified"
 fi
 
+echo "Trigger a rebuild of package ${PACKAGE} on COPR"
+
 if [ -n "$DRYRUN" ]; then
     echo curl -X POST https://copr.fedorainfracloud.org/webhooks/custom/${COPR_SECRET}/${PACKAGE}/
 else
-    curl -X POST https://copr.fedorainfracloud.org/webhooks/custom/${COPR_SECRET}/${PACKAGE}/
+    COPR=$(mktemp --tmpdir copr.XXXX.out)
+    RET=$(curl -s -w '%{http_code}\n' -X POST https://copr.fedorainfracloud.org/webhooks/custom/${COPR_SECRET}/${PACKAGE}/ -o${COPR})
+    echo "$RET"
+    if ! echo "$RET" | grep -q 200; then
+        echo -n "Webhook failed: "
+        cat ${COPR}
+        exit 1
+    fi
+    rm -f ${COPR}
 fi
 
 echo "COPR code rebuild webhook called succesfully"
