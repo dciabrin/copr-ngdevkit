@@ -11,9 +11,9 @@ URL:      https://github.com/dciabrin/ngdevkit-toolchain
 %global headrev %(echo %{version} | cut -d+ -f2)
 
 Source0:  https://github.com/dciabrin/ngdevkit-toolchain/archive/nightly-%{headrev}.tar.gz
-Source1:  %{gnu_mirror}/binutils/binutils-2.35.2.tar.bz2
+Source1:  %{gnu_mirror}/binutils/binutils-2.44.tar.bz2
 Source2:  %{gnu_mirror}/gcc/gcc-11.4.0/gcc-11.4.0.tar.xz
-Source3:  %{gnu_mirror}/gdb/gdb-9.2.tar.xz
+Source3:  %{gnu_mirror}/gdb/gdb-16.3.tar.xz
 Source4:  %{newlib_mirror}/newlib/newlib-4.0.0.tar.gz
 Source5:  https://sourceforge.net/projects/sdcc/files/sdcc/4.4.0/sdcc-src-4.4.0.tar.bz2
 
