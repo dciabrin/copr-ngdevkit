@@ -18,9 +18,9 @@ Source4:  %{newlib_mirror}/newlib/newlib-4.0.0.tar.gz
 Source5:  https://sourceforge.net/projects/sdcc/files/sdcc/4.4.0/sdcc-src-4.4.0.tar.bz2
 
 
-BuildRequires: autoconf automake bison gawk make texinfo flex gcc-c++
+BuildRequires: autoconf automake bison gawk make texinfo flex gcc-c++ patch
 BuildRequires: libtool pkgconfig
-BuildRequires: boost-devel bzip2-devel readline-devel
+BuildRequires: boost-devel bzip2-devel readline-devel glibc-gconv-extra
 BuildRequires: expat-devel gmp-devel libmpc-devel mpfr-devel ncurses-devel xz-devel zlib-devel
 Requires: expat flex gettext gmp libmpc mpfr ncurses sed xz zlib
 
@@ -44,6 +44,8 @@ make %{?_smp_mflags} -- prefix=/usr LOCAL_PACKAGE_DIR=%{_sourcedir}
 
 %install
 %make_install -- prefix=/usr
+# temporary workaround until we fix the upstream project
+rm -f %{_buildrootdir}/BUILDROOT/usr/lib/bfd-plugins/libdep.so
 
 # %check
 
