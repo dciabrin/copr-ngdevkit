@@ -49,9 +49,10 @@ make -j1 #%{?_smp_mflags}
 %{_bindir}/*.py
 /usr/m68k-neogeo-elf/include/*
 /usr/m68k-neogeo-elf/lib/*
+/usr/z80-neogeo-ihx/include/*
+/usr/z80-neogeo-ihx/lib/*
 %{_datadir}/ngdevkit/neogeo.zip
-%{_datadir}/ngdevkit/nullsound.ihx
-%{_datadir}/ngdevkit/nullsound/*
+%{_datadir}/ngdevkit/nullsound_driver.ihx
 %{_datadir}/pkgconfig/ngdevkit.pc
 # %doc
 %license COPYING COPYING.LESSER
