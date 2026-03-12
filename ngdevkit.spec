@@ -1,6 +1,6 @@
 Name:     ngdevkit
 Version:  0.4+202603120644
-Release:  1%{?dist}
+Release:  2%{?dist}
 Summary:  Open source development for Neo-Geo
 License:  GPLv3+
 URL:      https://github.com/dciabrin/ngdevkit
@@ -12,7 +12,8 @@ Source0:  https://github.com/dciabrin/ngdevkit/archive/nightly-%{headrev}.tar.gz
 BuildRequires: autoconf automake make zip python ngdevkit-toolchain pkg-config
 Requires: ngdevkit-toolchain pkg-config
 Requires: python >= 3.0
-Requires: python3-pyyaml
+Requires: python3-pillow
+Requires: python3-ruamel-yaml
 
 %description
 ngdevkit is a ASM/C/C++ software development kit for
@@ -59,5 +60,5 @@ make -j1 #%{?_smp_mflags}
 
 
 %changelog
-* Thu Mar 12 2026 CI Build Bot <> - 0.4+202603120644-1
+* Thu Mar 12 2026 CI Build Bot <> - 0.4+202603120644-2
 - Nightly build for tag nightly-202603120644
