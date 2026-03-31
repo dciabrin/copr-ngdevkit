@@ -1,5 +1,5 @@
 Name:     ngdevkit
-Version:  0.4+202603302102
+Version:  0.4+202603302109
 Release:  1%{?dist}
 Summary:  Open source development for Neo-Geo
 License:  GPLv3+
@@ -60,5 +60,5 @@ make -j1 #%{?_smp_mflags}
 
 
 %changelog
-* Mon Mar 30 2026 CI Build Bot <> - 0.4+202603302102-1
-- Nightly build for tag nightly-202603302102
+* Tue Mar 31 2026 CI Build Bot <> - 0.4+202603302109-1
+- Nightly build for tag nightly-202603302109
