@@ -1,6 +1,6 @@
 Name:     ngdevkit
 Version:  0.5+202605210550
-Release:  1%{?dist}
+Release:  2%{?dist}
 Summary:  Open source development for Neo-Geo
 License:  GPLv3+
 URL:      https://github.com/dciabrin/ngdevkit
@@ -53,6 +53,7 @@ make -j1 #%{?_smp_mflags}
 /usr/z80-neogeo-ihx/include/*
 /usr/z80-neogeo-ihx/lib/*
 %{_datadir}/ngdevkit/neogeo.zip
+%{_datadir}/ngdevkit/aes.zip
 %{_datadir}/ngdevkit/nullsound_driver.ihx
 %{_datadir}/pkgconfig/ngdevkit.pc
 # %doc
