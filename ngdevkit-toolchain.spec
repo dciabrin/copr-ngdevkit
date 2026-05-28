@@ -2,7 +2,7 @@
 %global newlib_mirror https://sourceware.org/ftp
 
 Name:     ngdevkit-toolchain
-Version:  0.1+202602051135
+Version:  0.1+202605281149
 Release:  1%{?dist}
 Summary:  Open source development for Neo-Geo
 License:  GPLv3+
@@ -68,5 +68,5 @@ rm -f %{_buildrootdir}/BUILDROOT/usr/lib/bfd-plugins/libdep.so
 
 
 %changelog
-* Thu Feb 05 2026 CI Build Bot <> - 0.1+202602051135-1
-- Nightly build for tag nightly-202602051135
+* Thu May 28 2026 CI Build Bot <> - 0.1+202605281149-1
+- Nightly build for tag nightly-202605281149
