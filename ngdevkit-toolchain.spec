@@ -21,8 +21,8 @@ Source5:  https://sourceforge.net/projects/sdcc/files/sdcc/4.4.0/sdcc-src-4.4.0.
 BuildRequires: autoconf automake bison gawk make texinfo flex gcc-c++ patch
 BuildRequires: libtool pkgconfig
 BuildRequires: boost-devel bzip2-devel readline-devel glibc-gconv-extra
-BuildRequires: expat-devel gmp-devel libmpc-devel mpfr-devel ncurses-devel xz-devel zlib-devel
-Requires: expat flex gettext gmp libmpc mpfr ncurses sed xz zlib
+BuildRequires: expat-devel gmp-devel isl-devel libmpc-devel mpfr-devel ncurses-devel xz-devel zlib-devel
+Requires: expat flex gettext gmp isl libmpc mpfr ncurses sed xz zlib
 
 %description
 ngdevkit is a C/C++ software development kit for the Neo-Geo AES or
