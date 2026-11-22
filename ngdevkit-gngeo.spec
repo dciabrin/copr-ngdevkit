@@ -1,5 +1,5 @@
 Name:     ngdevkit-gngeo
-Version:  0.8.1+202607271849
+Version:  0.8.1+202611221114
 Release:  1%{?dist}
 Summary:  Portable Neo-Geo emulator customized for ngdevkit
 License:  GPLv3+
@@ -52,5 +52,5 @@ make -j1 pkgdatadir=%{_datadir}/ngdevkit-gngeo
 
 
 %changelog
-* Mon Jul 27 2026 CI Build Bot <> - 0.8.1+202607271849-1
-- Nightly build for tag nightly-202607271849
+* Sun Nov 22 2026 CI Build Bot <> - 0.8.1+202611221114-1
+- Nightly build for tag nightly-202611221114
